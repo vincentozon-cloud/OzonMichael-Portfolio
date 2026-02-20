@@ -1,0 +1,144 @@
+"use client";
+import { useRef } from 'react';
+import { motion, Variants } from 'framer-motion';
+import { useParticles } from '@/hooks/useParticles';
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import BeyondTheCode from "@/components/BeyondTheCode"; 
+import CreativeHobby from "@/components/CreativeHobby"; 
+
+export default function Home() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useParticles(canvasRef);
+
+  const revealVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  };
+
+  return (
+    <main className="relative min-h-screen bg-[#020617] text-white">
+      <canvas 
+        ref={canvasRef} 
+        className="fixed inset-0 z-0 pointer-events-none opacity-40"
+        style={{ filter: 'blur(12px)' }}
+      />
+      
+      <div className="relative z-10">
+        <Navbar />
+
+        {/* 1. Hi Michael (Hero) */}
+        <section id="home" className="min-h-screen flex items-center justify-center">
+          <Hero />
+        </section>
+
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8 space-y-32 pb-20">
+          
+          {/* 2. About Me */}
+          <motion.section 
+            id="about" 
+            className="scroll-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealVariants}
+          >
+             <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">About Me</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+             </div>
+             <About />
+          </motion.section>
+
+          {/* 3. Skills */}
+          <motion.section 
+            id="skills" 
+            className="scroll-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealVariants}
+          >
+             <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">My Skills</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+             </div>
+             <Skills />
+          </motion.section>
+
+          {/* 4. Portfolio (Projects) */}
+          <motion.section 
+            id="projects" 
+            className="scroll-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealVariants}
+          >
+             <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Portfolio</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+             </div>
+             <Projects />
+          </motion.section>
+
+          {/* 5. Beyond The Code */}
+          <motion.section 
+            id="integrity" 
+            className="scroll-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealVariants}
+          >
+             <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Beyond The Code</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+             </div>
+             <BeyondTheCode />
+          </motion.section>
+
+          {/* 6. Creative Journey (Hobbies) */}
+          <motion.section 
+            id="hobbies" 
+            className="scroll-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealVariants}
+          >
+             <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Creative Journey</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+             </div>
+             <CreativeHobby />
+          </motion.section>
+
+          {/* 7. Contact */}
+          <motion.section 
+            id="contact" 
+            className="scroll-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealVariants}
+          >
+             <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Contact</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+             </div>
+             <Contact />
+          </motion.section>
+
+        </div>
+
+        <Footer />
+      </div>
+    </main>
+  );
+}
