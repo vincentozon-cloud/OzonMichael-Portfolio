@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 /*import BeyondTheCode from "@/components/BeyondTheCode"; exclude for now*/
 import CreativeHobby from "@/components/CreativeHobby"; 
 import VerificationRibbon from "@/components/VerificationRibbon";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -89,6 +90,22 @@ export default function Home() {
                 <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
              </div>
              <Projects />
+          </motion.section>
+
+          {/* 5. Testimonials Section */}
+          <motion.section 
+            id="testimonials" 
+            className="scroll-mt-32"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={revealVariants}
+>
+            <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Client Feedback</h2>
+                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+            </div>
+            <Testimonials />
           </motion.section>
 
           {/* 6. Creative Journey (Hobbies) */}
