@@ -28,7 +28,9 @@ body {
   /* Use Nunito as the primary font for everything */
   font-family: var(--font-nunito), sans-serif;
   overflow-x: hidden;
-  antialiased: true;
+  /* Corrected the antialiased property for standard CSS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* 4. Custom Utilities */

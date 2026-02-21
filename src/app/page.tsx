@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from 'react';
 import { motion, Variants } from 'framer-motion';
-import { useParticles } from '@/hooks/useParticles';
+// Removed useParticles since we are using Vanta
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -13,10 +13,10 @@ import Footer from "@/components/Footer";
 import CreativeHobby from "@/components/CreativeHobby"; 
 import VerificationRibbon from "@/components/VerificationRibbon";
 import Testimonials from "@/components/Testimonials";
+import VantaBackground from "@/components/VantaBackground"; // Added Vanta
 
 export default function Home() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useParticles(canvasRef);
+  // Removed canvasRef as Vanta handles its own mounting
 
   const revealVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
@@ -25,11 +25,8 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-[#020617] text-white">
-      <canvas 
-        ref={canvasRef} 
-        className="fixed inset-0 z-0 pointer-events-none opacity-40"
-        style={{ filter: 'blur(12px)' }}
-      />
+      {/* Replaced custom canvas with Vanta Background */}
+      <VantaBackground />
       
       <div className="relative z-10">
         <Navbar />
@@ -100,7 +97,7 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={revealVariants}
->
+          >
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Client Feedback</h2>
                 <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
