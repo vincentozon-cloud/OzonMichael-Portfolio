@@ -83,6 +83,12 @@ const Skills = () => {
     { name: "AutoCAD", src: "/logos/autocad.jpg", level: 95 },
   ];
 
+  const languages = [
+    { name: "English", src: "https://cdn-icons-png.flaticon.com/512/330/330425.png", level: 95 }, 
+    { name: "Filipino", src: "https://cdn-icons-png.flaticon.com/512/197/197561.png", level: 100 }, 
+    { name: "Korean", src: "/korean.jpg", level: 25 }, // Points to public/korean beginner level //
+  ];
+
   const SkillIcon = ({ name, src, level }: { name: string; src: string; level: number }) => {
     const radius = 45;
     const circumference = 2 * Math.PI * radius;
@@ -101,7 +107,8 @@ const Skills = () => {
               cx="56" cy="56" r={radius} stroke="currentColor" strokeWidth="3" fill="transparent"
               strokeDasharray={circumference}
               initial={{ strokeDashoffset: circumference }}
-              animate={{ strokeDashoffset: offset, opacity: [0.4, 0.7, 0.4] }}
+              whileInView={{ strokeDashoffset: offset }}
+              animate={{ opacity: [0.4, 0.7, 0.4] }}
               transition={{ 
                 strokeDashoffset: { duration: 2, ease: "easeOut" },
                 opacity: { duration: 3, repeat: Infinity, ease: "easeInOut" }
@@ -212,6 +219,38 @@ const Skills = () => {
             </span>
           </div>
           <CarouselTrack items={tools} speed="40s" />
+        </motion.div>
+
+        {/* LANGUAGES CATEGORY */}
+        <motion.div 
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="relative group px-6 max-w-7xl mx-auto"
+        >
+          <div className="flex items-center gap-4 mb-1">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <div className="relative overflow-hidden">
+              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-[0.1em] uppercase group-hover:tracking-[0.2em] transition-all duration-500">
+                COMMUNICATION & LANGUAGES
+              </h3>
+              <motion.div 
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2 }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
+              />
+            </div>
+            <div className="hidden md:block h-[1px] flex-grow bg-gradient-to-r from-emerald-500/20 to-transparent"></div>
+            <span className="hidden md:block text-[7px] font-mono text-emerald-500/30 tracking-widest uppercase">
+              COMM_LINK: ACTIVE
+            </span>
+          </div>
+          <CarouselTrack items={languages} speed="60s" />
         </motion.div>
       </div>
 
