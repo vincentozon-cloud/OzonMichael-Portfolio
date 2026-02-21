@@ -4,24 +4,31 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: "Partner Name/Company",
-    role: "Project Lead",
+    name: "ReggieTech Sales and Repair Services",
+    role: "Business Owner",
     category: "Web Development",
-    content: "Insert the custom words here reflecting your technical delivery. Focus on the 'eMVeOzHub' integrity or the speed of the implementation.",
+    content: "Michael delivered a lightning-fast website that significantly improved our customer reach. The SEO structure is rock-solid, and the cross-platform accessibility between mobile and desktop is seamless. He is a highly recommended developer who prioritizes performance and clean code above all else.",
     verifiedContact: "Contact details available upon request"
   },
   {
-    name: "Partner Name/Company",
-    role: "Operations Manager",
-    category: "Virtual Assistance",
-    content: "Highlight your organizational skills and reliability. Perfect for showcasing your 'clean hands and pure heart' work ethic.",
+    name: "Future Focus Language Training and Institute x CamiTeachesKorean",
+    role: "Business Owner & Head Teacher",
+    category: "Web Development and School Platform",
+    content: "A masterclass in functional design. Michael architected a high-performance system featuring secure biometric logins, a real-time enrollment calculator, and integrated Google Maps. The platform is fully English-to-Korean language ready, providing a seamless digital experience for our students from enrollment to daily attendance.",
     verifiedContact: "Contact details available upon request"
   },
   {
-    name: "Partner Name/Company",
-    role: "Legal Consultant",
-    category: "Legal Support",
-    content: "Words regarding your attention to detail and compliance with standards like RA 8293.",
+    name: "E. F Cabredas Land Surveying Services",
+    role: "Business Owner & Geodetic Engineer",
+    category: "Web Development",
+    content: "Michael developed a robust platform that literally serves as my 'Digital Secretary' while I am in the field. With a custom quotation calculator, Google Maps integration, and synchronized social media reach, the site handles my lead generation and client inquiries autonomously. Highly recommended for any professional needing a high-speed, reliable digital presence.",
+    verifiedContact: "Contact details available upon request"
+  },
+  {
+    name: "Atty. Lilibeth Sanchez-Pates Law Office and Realty",
+    role: "Senior Partner / Attorney",
+    category: "Legal Tech & Web Infrastructure",
+    content: "Professionalism and data integrity are non-negotiable in our practice. Michael delivered a sophisticated digital platform that is fast, secure, and fully compliant with technical standards. His attention to detail ensures our firm remains accessible to clients while maintaining the high-level digital security we require.",
     verifiedContact: "Contact details available upon request"
   }
 ];
@@ -29,7 +36,8 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <div className="space-y-12">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Updated to md:grid-cols-2 for a clean 2x2 grid with 4 items */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {testimonials.map((t, idx) => (
           <motion.div
             key={idx}
