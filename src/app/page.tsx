@@ -9,8 +9,9 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import BeyondTheCode from "@/components/BeyondTheCode"; 
+/*import BeyondTheCode from "@/components/BeyondTheCode"; exclude for now*/
 import CreativeHobby from "@/components/CreativeHobby"; 
+import VerificationRibbon from "@/components/VerificationRibbon";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -32,20 +33,23 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
 
-        {/* 1. Hi Michael (Hero) */}
+        {/* 1. Hero Section */}
         <section id="home" className="min-h-screen flex items-center justify-center">
           <Hero />
         </section>
+
+        {/* Verification Ribbon - Placed between Hero and About */}
+        <VerificationRibbon />
 
         <div className="max-w-[1200px] mx-auto px-4 md:px-8 space-y-32 pb-20">
           
           {/* 2. About Me */}
           <motion.section 
             id="about" 
-            className="scroll-mt-20"
+            className="scroll-mt-32"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }} // Changed margin to amount for better visibility
             variants={revealVariants}
           >
              <div className="text-center mb-16">
@@ -58,10 +62,10 @@ export default function Home() {
           {/* 3. Skills */}
           <motion.section 
             id="skills" 
-            className="scroll-mt-20"
+            className="scroll-mt-32"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={revealVariants}
           >
              <div className="text-center mb-16">
@@ -74,10 +78,10 @@ export default function Home() {
           {/* 4. Portfolio (Projects) */}
           <motion.section 
             id="projects" 
-            className="scroll-mt-20"
+            className="scroll-mt-32"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={revealVariants}
           >
              <div className="text-center mb-16">
@@ -87,29 +91,13 @@ export default function Home() {
              <Projects />
           </motion.section>
 
-          {/* 5. Beyond The Code */}
-          <motion.section 
-            id="integrity" 
-            className="scroll-mt-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={revealVariants}
-          >
-             <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Beyond The Code</h2>
-                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
-             </div>
-             <BeyondTheCode />
-          </motion.section>
-
           {/* 6. Creative Journey (Hobbies) */}
           <motion.section 
             id="hobbies" 
-            className="scroll-mt-20"
+            className="scroll-mt-32"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={revealVariants}
           >
              <div className="text-center mb-16">
@@ -122,10 +110,10 @@ export default function Home() {
           {/* 7. Contact */}
           <motion.section 
             id="contact" 
-            className="scroll-mt-20"
+            className="scroll-mt-32"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={revealVariants}
           >
              <div className="text-center mb-16">

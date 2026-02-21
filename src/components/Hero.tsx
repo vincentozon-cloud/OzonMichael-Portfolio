@@ -1,6 +1,6 @@
 "use client";
 import Typewriter from 'typewriter-effect';
-import GlassButton from "./GlassButton";
+import GlassButton from "@/components/GlassButton";
 
 const Hero = () => {
   const scrollTo = (id: string) => {
@@ -9,7 +9,6 @@ const Hero = () => {
   };
 
   return (
-    // Added id="home" here
     <section id="home" className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 lg:px-24 pt-20">
       
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-20">

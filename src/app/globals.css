@@ -24,6 +24,11 @@ body {
   overflow-x: hidden;
 }
 
+/* --- ADD THIS UTILITY BLOCK FOR TAILWIND v4 --- */
+@utility clip-path-hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
 /* Custom Infinite Scroll Animation for Skills */
 @keyframes infinite-scroll {
   from { transform: translateX(0); }

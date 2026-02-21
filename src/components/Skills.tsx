@@ -217,10 +217,9 @@ const Skills = () => {
 
       <div className="mt-8 flex flex-col items-center border-t border-white/5 pt-6">
         <p className="text-center text-gray-500 italic text-[11px] lg:text-xs max-w-lg px-6 leading-relaxed">
-          "Who may ascend the mountain of the Lord? Who may stand in his holy place? 
-          The one who has <span className="text-emerald-500/80 not-italic font-bold">clean hands and a pure heart.</span>"
+          "Whatever your hand finds to do <span className="text-emerald-500/80 not-italic font-bold">do it with all your might...</span>"
         </p>
-        <p className="mt-1 text-[9px] text-gray-600 uppercase tracking-widest">— Psalm 24:3-4</p>
+        <p className="mt-1 text-[9px] text-gray-600 uppercase tracking-widest">— Ecclesiastes 9:10</p>
       </div>
     </section>
   );
