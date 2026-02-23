@@ -62,21 +62,22 @@ const Contact = () => {
 
     setIsLoading(true);
 
-    // Using your provided keys: r_HBvLeVqAh7xyQau (Public)
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with the ones from your dashboard
     emailjs.sendForm(
-      'service_default', // Check your EmailJS dashboard for Service ID (usually service_default)
-      'template_default', // Check your EmailJS dashboard for Template ID (usually template_default)
+      'service_m1n9l3q', // <--- REPLACE THIS with your new Service ID from EmailJS
+      'template_default', // <--- REPLACE THIS if your Template ID is different (e.g., template_k92ls)
       formRef.current!, 
-      'r_HBvLeVqAh7xyQau' // Your Public Key
+      'r_HBvLeVqAh7xyQau' 
     )
     .then(() => {
         setIsSubmitted(true);
         setIsLoading(false);
+        formRef.current?.reset(); // Clear form after success
         setTimeout(() => setIsSubmitted(false), 7000);
     }, (error) => {
         console.log("Error:", error.text);
         setIsLoading(false);
-        alert("Verification failed. Please check connection.");
+        alert(`Verification failed: ${error.text}`);
     });
   };
 
@@ -105,25 +106,29 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Your Name</label>
-                <input name="from_name" type="text" placeholder="Who are we working with?" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
+                {/* Changed name to "name" to match {{name}} in your template */}
+                <input name="name" type="text" placeholder="Who are we working with?" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">The Goal</label>
-                <select name="goal" className="w-full bg-[#0a0a0a] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 appearance-none">
-                  <option>Build a Custom Solution</option>
-                  <option>Improve Integrity & Monitoring</option>
-                  <option>Creative Collaboration</option>
+                {/* Changed name to "title" to match {{title}} in your template's subject line */}
+                <select name="title" className="w-full bg-[#0a0a0a] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 appearance-none">
+                  <option value="Custom Solution">Build a Custom Solution</option>
+                  <option value="Integrity Monitoring">Improve Integrity & Monitoring</option>
+                  <option value="Collaboration">Creative Collaboration</option>
                 </select>
               </div>
             </div>
             
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Best way to reach you</label>
-                <input name="from_email" type="email" placeholder="email@address.com" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
+                {/* Changed name to "email" to match {{email}} in your template */}
+                <input name="email" type="email" placeholder="email@address.com" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
             </div>
 
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">What's on your mind?</label>
+                {/* Name "message" already matches {{message}} in your template */}
                 <textarea name="message" rows={4} placeholder="Tell me about your vision..." className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all resize-none" />
             </div>
             
