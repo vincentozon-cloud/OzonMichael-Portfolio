@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react"; // Added for tracking
+import { Nunito, Bellefair } from "next/font/google"; // Added Bellefair
+import { Analytics } from "@vercel/analytics/react"; 
 import "./globals.css";
 
 const nunito = Nunito({ 
   subsets: ["latin"], 
   variable: "--font-nunito", 
   display: 'swap' 
+});
+
+// This replaces the Soria font with a reliable Google version
+const bellefair = Bellefair({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bellefair",
+  display: 'swap'
 });
 
 export const metadata: Metadata = {
@@ -21,9 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${nunito.variable} antialiased`}>
+      {/* Added bellefair.variable here */}
+      <body className={`${nunito.variable} ${bellefair.variable} antialiased`}>
         {children}
-        <Analytics /> {/* This component handles the 'who viewed' data */}
+        <Analytics /> 
       </body>
     </html>
   );

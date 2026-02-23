@@ -47,7 +47,7 @@ const Projects = () => {
       tech: ["Next.js", "Supabase", "Tailwind CSS"],
       status: "Active Development",
       link: "https://emveoz-hub.vercel.app/",
-      bgImage: "/gps-cover.jpg" // Updated to your provided image
+      bgImage: "/gps-cover.jpg" 
     },
     {
       title: "Future Focus",
@@ -71,7 +71,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative py-12">
-      <SectionTitle subtitle="Selected Works" title="PROJECT DOSSIER" />
+      <SectionTitle subtitle="Selected Works" title="PROJECTS" />
 
       <div className="max-w-7xl mx-auto px-6 h-[500px] flex flex-col md:flex-row gap-4">
         {projectData.map((project, index) => (

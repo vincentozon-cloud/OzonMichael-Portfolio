@@ -55,6 +55,7 @@ const Contact = () => {
       return;
     }
 
+    // Protection for bot spam
     if (timeElapsed < 3000) {
       console.log("Bot detected via Speed Check.");
       return;
@@ -62,22 +63,22 @@ const Contact = () => {
 
     setIsLoading(true);
 
-    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with the ones from your dashboard
+    // Using your verified Service ID: service_0n896yj
     emailjs.sendForm(
-      'service_m1n9l3q', // <--- REPLACE THIS with your new Service ID from EmailJS
-      'template_default', // <--- REPLACE THIS if your Template ID is different (e.g., template_k92ls)
+      'service_0n896yj', 
+      'template_default', 
       formRef.current!, 
       'r_HBvLeVqAh7xyQau' 
     )
     .then(() => {
         setIsSubmitted(true);
         setIsLoading(false);
-        formRef.current?.reset(); // Clear form after success
+        formRef.current?.reset(); 
         setTimeout(() => setIsSubmitted(false), 7000);
     }, (error) => {
         console.log("Error:", error.text);
         setIsLoading(false);
-        alert(`Verification failed: ${error.text}`);
+        alert(`Verification failed: ${error.text}. Please check your connection or try again later.`);
     });
   };
 
@@ -99,6 +100,7 @@ const Contact = () => {
         <motion.div className="bg-white/[0.02] border border-white/[0.08] backdrop-blur-3xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl">
           <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
             
+            {/* Honeypot field for bot protection */}
             <div className="hidden" aria-hidden="true">
               <input type="text" name="architect_verify" tabIndex={-1} autoComplete="off" />
             </div>
@@ -106,12 +108,12 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Your Name</label>
-                {/* Changed name to "name" to match {{name}} in your template */}
+                {/* name="name" matches {{name}} in EmailJS */}
                 <input name="name" type="text" placeholder="Who are we working with?" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">The Goal</label>
-                {/* Changed name to "title" to match {{title}} in your template's subject line */}
+                {/* name="title" matches {{title}} in EmailJS Subject Line */}
                 <select name="title" className="w-full bg-[#0a0a0a] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 appearance-none">
                   <option value="Custom Solution">Build a Custom Solution</option>
                   <option value="Integrity Monitoring">Improve Integrity & Monitoring</option>
@@ -122,13 +124,13 @@ const Contact = () => {
             
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Best way to reach you</label>
-                {/* Changed name to "email" to match {{email}} in your template */}
+                {/* name="email" matches {{email}} in EmailJS */}
                 <input name="email" type="email" placeholder="email@address.com" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
             </div>
 
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">What's on your mind?</label>
-                {/* Name "message" already matches {{message}} in your template */}
+                {/* name="message" matches {{message}} in EmailJS */}
                 <textarea name="message" rows={4} placeholder="Tell me about your vision..." className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all resize-none" />
             </div>
             

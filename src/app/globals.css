@@ -1,22 +1,13 @@
 @import "tailwindcss";
 
-/* 1. Soria Font Face (Local/External) */
-@font-face {
-  font-family: "soria";
-  src: url("https://db.onlinewebfonts.com/t/79495efc562502f64703a55a8220083e.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 2. Map to Tailwind v4 Theme */
+/* 1. Map to Tailwind v4 Theme */
 @theme {
-  --font-soria: "soria", serif;
-  /* Link to the variable we defined in layout.tsx */
+  /* Updated to use the variable from layout.tsx instead of the broken local link */
+  --font-soria: var(--font-bellefair), serif;
   --font-nunito: var(--font-nunito);
 }
 
-/* 3. Global Styles */
+/* 2. Global Styles */
 :root {
   --background: #050505;
   --foreground: #ffffff;
@@ -28,15 +19,14 @@ body {
   /* Use Nunito as the primary font for everything */
   font-family: var(--font-nunito), sans-serif;
   overflow-x: hidden;
-  /* Corrected the antialiased property for standard CSS */
+  /* Standard modern antialiasing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 4. Custom Utilities */
+/* 3. Custom Utilities */
 .clip-path-hexagon {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* Custom Infinite Scroll Animation for Skills */
@@ -61,4 +51,9 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #10b98133;
   border-radius: 10px;
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #10b98166;
 }
