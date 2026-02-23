@@ -47,7 +47,7 @@ const Projects = () => {
       tech: ["Next.js", "Supabase", "Tailwind CSS"],
       status: "Active Development",
       link: "https://emveoz-hub.vercel.app/",
-      bgImage: "https://images.unsplash.com/photo-1551288049-bbbda536639a?q=80&w=2340&auto=format&fit=crop"
+      bgImage: "/gps-cover.jpg" // Updated to your provided image
     },
     {
       title: "Future Focus",
