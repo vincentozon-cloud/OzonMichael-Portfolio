@@ -63,10 +63,10 @@ const Contact = () => {
 
     setIsLoading(true);
 
-    // Using your verified Service ID: service_0n896yj
+    // Using your verified IDs: service_0n896yj and template_wyye1vk
     emailjs.sendForm(
       'service_0n896yj', 
-      'template_default', 
+      'template_wyye1vk', 
       formRef.current!, 
       'r_HBvLeVqAh7xyQau' 
     )
