@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import OngoingProjects from "@/components/OngoingProjects"; // Added OngoingProjects
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 /*import BeyondTheCode from "@/components/BeyondTheCode"; exclude for now*/
@@ -87,6 +88,22 @@ export default function Home() {
                 <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
              </div>
              <Projects />
+          </motion.section>
+
+          {/* 4.5 Ongoing Projects (The Lab) */}
+          <motion.section 
+            id="ongoing" 
+            className="scroll-mt-32"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={revealVariants}
+          >
+            <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold uppercase tracking-widest text-orange-400">Current Build</h2>
+                <div className="h-1 w-20 bg-orange-500 mx-auto mt-2 rounded-full"></div>
+            </div>
+            <OngoingProjects />
           </motion.section>
 
           {/* 5. Testimonials Section */}
