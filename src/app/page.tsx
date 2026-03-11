@@ -40,7 +40,7 @@ export default function Home() {
         {/* Verification Ribbon - Placed between Hero and About */}
         <VerificationRibbon />
 
-        <div className="max-w-[1200px] mx-auto px-4 md:px-8 space-y-32 pb-20">
+        <div className="max-w-300 mx-auto px-4 md:px-8 space-y-32 pb-20">
           
           {/* 2. About Me */}
           <motion.section 

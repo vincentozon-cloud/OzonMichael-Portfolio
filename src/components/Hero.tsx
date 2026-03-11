@@ -29,15 +29,13 @@ const Hero = () => {
               I am a
             </span>
             
-            <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 min-h-[1.2em] whitespace-nowrap">
+            <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600 min-h-[1.2em] whitespace-nowrap">
               <Typewriter
                 options={{
                   strings: [
-                    'WEB DEVELOPER', 
-                    'VIRTUAL ASSISTANT', 
-                    'LEGAL ASSISTANT', 
-                    'AUTOCAD OPERATOR', 
-                    'SALESMAN'
+                    'CLOUD CYBERSECURITY ANALYST', 
+                    'ASPIRING DevSecOps ENGINEER', 
+                    'FULL-STACK DEVELOPER', 
                   ],
                   autoStart: true,
                   loop: true,
@@ -69,9 +67,9 @@ const Hero = () => {
         {/* Right Column: Optimized Hexagonal Profile Picture */}
         <div className="flex-1 flex justify-center items-center order-1 md:order-2 z-10">
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-500 clip-path-hexagon blur-2xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+            <div className="absolute -inset-4 bg-linear-to-r from-blue-600 to-cyan-500 clip-path-hexagon blur-2xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
             
-            <div className="relative w-72 h-80 md:w-96 md:h-[28rem] bg-blue-600 clip-path-hexagon flex items-center justify-center p-[4px]">
+            <div className="relative w-72 h-80 md:w-96 md:h-112 bg-blue-600 clip-path-hexagon flex items-center justify-center p-1">
                <div className="w-full h-full bg-[#050505] clip-path-hexagon flex items-center justify-center overflow-hidden p-3 md:p-4">
                   <img 
                     src="/me.jpg" 
