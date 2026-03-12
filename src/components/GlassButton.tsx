@@ -32,7 +32,7 @@ const GlassButton = ({ text, onClick, className }: Props) => {
     >
       {/* 2. ANIMATED RADIANT GLOW (The "Inside" Movement) */}
       <motion.div
-        className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"
+        className="absolute inset-0 z-0 bg-linear-to-r from-transparent via-blue-500/20 to-transparent"
         initial={{ x: "-100%" }}
         animate={{ x: "100%" }}
         transition={{ 

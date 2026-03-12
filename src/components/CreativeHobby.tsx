@@ -45,7 +45,7 @@ const CreativeHobby = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl overflow-hidden backdrop-blur-xl hover:bg-white/[0.06] hover:border-white/20 transition-all duration-500"
+              className="group relative bg-white/3 border border-white/8 rounded-3xl overflow-hidden backdrop-blur-xl hover:bg-white/6 hover:border-white/20 transition-all duration-500"
             >
               {/* VIDEO PLAYER */}
               <div className="relative aspect-video bg-black/20">
@@ -69,7 +69,7 @@ const CreativeHobby = () => {
                 </p>
                 
                 {item.isMusical && (
-                  <div className="p-4 bg-amber-500/[0.03] border border-amber-500/20 rounded-2xl backdrop-blur-sm">
+                  <div className="p-4 bg-amber-500/3 border border-amber-500/20 rounded-2xl backdrop-blur-sm">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
                       <span className="text-[9px] font-black text-amber-500 uppercase tracking-widest">
