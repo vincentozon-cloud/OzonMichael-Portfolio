@@ -34,9 +34,9 @@ const About = () => {
         </div>
 
         {/* Right Side: Information Grid - Matching the Glassmorphism Badge Style */}
-        <div className="flex-1 w-full bg-white/[0.03] backdrop-blur-md border border-white/10 p-8 rounded-2xl relative overflow-hidden group">
+        <div className="flex-1 w-full bg-white/3 backdrop-blur-md border border-white/10 p-8 rounded-2xl relative overflow-hidden group">
           {/* Inner Rim Light Effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent pointer-events-none" />
           
           <div className="space-y-4 relative z-10">
             <div className="flex border-b border-white/5 pb-2">

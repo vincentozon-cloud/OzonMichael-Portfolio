@@ -97,7 +97,7 @@ const Contact = () => {
         </div>
 
         {/* GLASS FORM */}
-        <motion.div className="bg-white/[0.02] border border-white/[0.08] backdrop-blur-3xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl">
+        <motion.div className="bg-white/2 border border-white/8 backdrop-blur-3xl rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl">
           <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
             
             {/* Honeypot field for bot protection */}
@@ -109,7 +109,7 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Your Name</label>
                 {/* name="name" matches {{name}} in EmailJS */}
-                <input name="name" type="text" placeholder="Who are we working with?" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
+                <input name="name" type="text" placeholder="Who are we working with?" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">The Goal</label>
@@ -125,13 +125,13 @@ const Contact = () => {
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Best way to reach you</label>
                 {/* name="email" matches {{email}} in EmailJS */}
-                <input name="email" type="email" placeholder="email@address.com" required className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
+                <input name="email" type="email" placeholder="email@address.com" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
             </div>
 
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">What's on your mind?</label>
                 {/* name="message" matches {{message}} in EmailJS */}
-                <textarea name="message" rows={4} placeholder="Tell me about your vision..." className="w-full bg-white/[0.05] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all resize-none" />
+                <textarea name="message" rows={4} placeholder="Tell me about your vision..." className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all resize-none" />
             </div>
             
             <button type="submit" disabled={isLoading} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-gray-700 text-white font-bold py-5 rounded-2xl transition-all active:scale-[0.99] uppercase tracking-widest text-sm shadow-lg shadow-emerald-900/20">
@@ -155,7 +155,7 @@ const Contact = () => {
 
         {/* SOCIAL DOCK & VERSE */}
         <div className="mt-16 flex flex-col items-center">
-          <div className="flex gap-8 items-center justify-center py-5 px-10 bg-white/[0.03] border border-white/[0.08] rounded-full backdrop-blur-md mb-12">
+          <div className="flex gap-8 items-center justify-center py-5 px-10 bg-white/3 border border-white/8 rounded-full backdrop-blur-md mb-12">
             {socials.map((social, idx) => (
               <motion.a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" whileHover={{ y: -8, scale: 1.3 }} whileTap={{ scale: 0.9 }} className={`text-2xl text-white/30 transition-all duration-300 ${social.color}`}>
                 {social.icon}
