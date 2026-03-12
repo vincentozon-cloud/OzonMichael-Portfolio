@@ -31,7 +31,7 @@ const SectionTitle = ({ subtitle, title }: { subtitle: string; title: string }) 
           </motion.span>
         ))}
       </div>
-      <motion.div initial={{ width: 0 }} whileInView={{ width: "40px" }} transition={{ duration: 0.8, delay: 0.6 }} className="h-[2px] bg-emerald-500/50 mt-2" />
+      <motion.div initial={{ width: 0 }} whileInView={{ width: "40px" }} transition={{ duration: 0.8, delay: 0.6 }} className="h-0.5 bg-emerald-500/50 mt-2" />
     </motion.div>
   );
 };
@@ -73,7 +73,7 @@ const Projects = () => {
     <section id="projects" className="relative py-12">
       <SectionTitle subtitle="Selected Works" title="PROJECTS" />
 
-      <div className="max-w-7xl mx-auto px-6 h-[500px] flex flex-col md:flex-row gap-4">
+      <div className="max-w-7xl mx-auto px-6 h-125 flex flex-col md:flex-row gap-4">
         {projectData.map((project, index) => (
           <motion.div
             key={index}
@@ -103,7 +103,7 @@ const Projects = () => {
                 initial={{ y: "-100%" }}
                 animate={{ y: "100%" }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 w-full h-[120px] bg-gradient-to-b from-transparent via-emerald-500/10 to-transparent z-10 pointer-events-none"
+                className="absolute inset-0 w-full h-30 bg-linear-to-b from-transparent via-emerald-500/10 to-transparent z-10 pointer-events-none"
               />
             )}
 

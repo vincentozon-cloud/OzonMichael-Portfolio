@@ -55,7 +55,7 @@ const SectionTitle = ({ subtitle, title }: { subtitle: string; title: string }) 
         initial={{ width: 0 }}
         whileInView={{ width: "40px" }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="h-[2px] bg-emerald-500/50 mt-2"
+        className="h-0.5 bg-emerald-500/50 mt-2"
       />
     </motion.div>
   );
@@ -117,7 +117,7 @@ const Skills = () => {
             />
           </svg>
 
-          <div className="relative w-14 h-14 bg-white/[0.03] border border-white/10 rounded-2xl flex items-center justify-center p-3 group-hover:border-emerald-500/30 group-hover:bg-emerald-500/10 transition-all duration-500 shadow-2xl backdrop-blur-md z-10">
+          <div className="relative w-14 h-14 bg-white/3 border border-white/10 rounded-2xl flex items-center justify-center p-3 group-hover:border-emerald-500/30 group-hover:bg-emerald-500/10 transition-all duration-500 shadow-2xl backdrop-blur-md z-10">
             <img
               src={src} alt={name}
               className="w-full h-full object-contain relative z-10 brightness-90 group-hover:brightness-125 transition-all"
@@ -140,8 +140,8 @@ const Skills = () => {
 
   const CarouselTrack = ({ items, speed = "30s" }: { items: any[], speed?: string }) => (
     <div className="relative flex overflow-hidden py-1">
-      <div className="absolute inset-y-0 left-0 w-[8%] bg-gradient-to-r from-[#050505] to-transparent z-20 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-[8%] bg-gradient-to-l from-[#050505] to-transparent z-20 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-[8%] bg-linear-to-r from-[#050505] to-transparent z-20 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-[8%] bg-linear-to-l from-[#050505] to-transparent z-20 pointer-events-none" />
 
       <div className="flex animate-infinite-scroll whitespace-nowrap" style={{ animationDuration: speed }}>
         {[...items, ...items, ...items].map((item, index) => (
@@ -171,17 +171,17 @@ const Skills = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <div className="relative overflow-hidden">
-              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-[0.1em] uppercase group-hover:tracking-[0.2em] transition-all duration-500">
+              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-widest uppercase group-hover:tracking-[0.2em] transition-all duration-500">
                 DEVELOPMENT & ENGINEERING
               </h3>
               <motion.div 
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
+                className="absolute inset-0 bg-linear-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
               />
             </div>
-            <div className="hidden md:block h-[1px] flex-grow bg-gradient-to-r from-emerald-500/20 to-transparent"></div>
+            <div className="hidden md:block h-px grow bg-linear-to-r from-emerald-500/20 to-transparent"></div>
             <span className="hidden md:block text-[7px] font-mono text-emerald-500/30 tracking-widest uppercase">
               SYS_STAT: OPTIMIZED
             </span>
@@ -203,17 +203,17 @@ const Skills = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <div className="relative overflow-hidden">
-              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-[0.1em] uppercase group-hover:tracking-[0.2em] transition-all duration-500">
+              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-widest uppercase group-hover:tracking-[0.2em] transition-all duration-500">
                 MANAGEMENT & DESIGN
               </h3>
               <motion.div 
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 1 }}
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
+                className="absolute inset-0 bg-linear-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
               />
             </div>
-            <div className="hidden md:block h-[1px] flex-grow bg-gradient-to-r from-emerald-500/20 to-transparent"></div>
+            <div className="hidden md:block h-px grow bg-linear-to-r from-emerald-500/20 to-transparent"></div>
             <span className="hidden md:block text-[7px] font-mono text-emerald-500/30 tracking-widest uppercase">
               INFRA_LOAD: STABLE
             </span>
@@ -235,17 +235,17 @@ const Skills = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <div className="relative overflow-hidden">
-              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-[0.1em] uppercase group-hover:tracking-[0.2em] transition-all duration-500">
+              <h3 className="text-sm lg:text-lg font-black text-white/90 tracking-widest uppercase group-hover:tracking-[0.2em] transition-all duration-500">
                 COMMUNICATION & LANGUAGES
               </h3>
               <motion.div 
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2 }}
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
+                className="absolute inset-0 bg-linear-to-r from-transparent via-emerald-500/10 to-transparent w-full h-full"
               />
             </div>
-            <div className="hidden md:block h-[1px] flex-grow bg-gradient-to-r from-emerald-500/20 to-transparent"></div>
+            <div className="hidden md:block h-px grow bg-linear-to-r from-emerald-500/20 to-transparent"></div>
             <span className="hidden md:block text-[7px] font-mono text-emerald-500/30 tracking-widest uppercase">
               COMM_LINK: ACTIVE
             </span>
