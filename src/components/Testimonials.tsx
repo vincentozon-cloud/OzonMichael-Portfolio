@@ -42,7 +42,7 @@ const Testimonials = () => {
           <motion.div
             key={idx}
             whileHover={{ y: -10 }}
-            className="relative p-8 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md flex flex-col justify-between group transition-all duration-500 hover:bg-white/[0.05] hover:border-blue-500/30"
+            className="relative p-8 rounded-2xl bg-white/2 border border-white/10 backdrop-blur-md flex flex-col justify-between group transition-all duration-500 hover:bg-white/5 hover:border-blue-500/30"
           >
             {/* Category Badge */}
             <div className="absolute -top-3 left-6 px-3 py-1 bg-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest text-white">
