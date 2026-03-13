@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import DOMPurify from "dompurify"; // Sanitization Import
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLinkedin, FaFacebook, FaTiktok, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
 
@@ -63,12 +64,20 @@ const Contact = () => {
 
     setIsLoading(true);
 
-    // Using your verified IDs: service_0n896yj and template_j6ydmix
-    emailjs.sendForm(
-      'service_0n896yj', 
-      'template_j6ydmix', 
-      formRef.current!, 
-      'r_HBvLeVqAh7xyQau' 
+    // BLUE TEAM SANITIZATION: Clean all inputs before sending
+    const sanitizedParams = {
+      name: DOMPurify.sanitize(formData.get("name") as string),
+      title: DOMPurify.sanitize(formData.get("title") as string),
+      email: DOMPurify.sanitize(formData.get("email") as string),
+      message: DOMPurify.sanitize(formData.get("message") as string),
+    };
+
+    // SECURE INTEGRATION: Using Environment Variables for IDs and Keys
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, 
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, 
+      sanitizedParams, 
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
     .then(() => {
         setIsSubmitted(true);
@@ -108,12 +117,10 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Your Name</label>
-                {/* name="name" matches {{name}} in EmailJS */}
                 <input name="name" type="text" placeholder="Who are we working with?" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">The Goal</label>
-                {/* name="title" matches {{title}} in EmailJS Subject Line */}
                 <select name="title" className="w-full bg-[#0a0a0a] border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 appearance-none">
                   <option value="Custom Solution">Build a Custom Solution</option>
                   <option value="Integrity Monitoring">Improve Integrity & Monitoring</option>
@@ -124,13 +131,11 @@ const Contact = () => {
             
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">Best way to reach you</label>
-                {/* name="email" matches {{email}} in EmailJS */}
                 <input name="email" type="email" placeholder="email@address.com" required className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all" />
             </div>
 
             <div className="space-y-2">
                 <label className="text-[10px] font-black text-emerald-500 uppercase tracking-widest ml-1">What's on your mind?</label>
-                {/* name="message" matches {{message}} in EmailJS */}
                 <textarea name="message" rows={4} placeholder="Tell me about your vision..." className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-emerald-500/50 transition-all resize-none" />
             </div>
             

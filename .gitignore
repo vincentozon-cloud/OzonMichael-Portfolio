@@ -8,7 +8,7 @@
 /out/
 /build
 
-# security: NEVER commit environment variables
+# security: NEVER commit environment variables (Fail-Safe)
 .env
 .env.local
 .env.development.local
@@ -16,6 +16,7 @@
 .env.production.local
 *.env
 *.env.*
+.env*.local
 
 # security: Ignore certificates and private keys (Critical for IBM/Google labs)
 *.pem
