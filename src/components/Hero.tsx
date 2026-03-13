@@ -29,7 +29,7 @@ const Hero = () => {
               I am a
             </span>
             
-            <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600 min-h-[1.2em] whitespace-nowrap">
+            <span className="block text-xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600 min-h-[1.2em] whitespace-nowrap">
               <Typewriter
                 options={{
                   strings: [
