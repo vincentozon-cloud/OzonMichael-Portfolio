@@ -1,38 +1,27 @@
-# Michael Vincent Ozon | Full-Stack Developer & DevSecOps Engineer 🛡️
-### Specialized in High-Integrity Enterprise Solutions & Cloud Security
+Michael Vincent Ozon | Full-Stack & DevSecOps Engineer 🛡️
+Hardening Enterprise Ecosystems & Securing Cloud Infrastructure
+"Fail-Safe by Design. Secure by Default."
 
-**"Fail-Safe by Design. Secure by Default."**
+🚀 The Mission: Operational Integrity
+Transitioning from Senior Sales to Software Engineering, I bridge the gap between field operations and secure architecture. I don't just build apps; I eliminate manual fraud, secure data in remote "Dark Zones," and implement high-fidelity audit trails for logistics and technical teams.
 
----
+🛠️ Hardened Tech Stack
+Frontend & Logic: Next.js (App Router), TypeScript, Tailwind CSS
 
-## 🚀 The Mission: Fixing Business Leaks with Code
-As a former Senior Salesman, I transitioned into software engineering to build the tools I wish I had on the field. My work focuses on eliminating manual fraud, securing data in remote "Dark Zones," and building "Clean Hands" audit trails for logistics and technical teams.
+Backend & Cloud: Supabase (Postgres), Row-Level Security (RLS)
 
-## 🛠️ Specialized Tech Stack
-* **Frontend & Logic:** Next.js (App Router), TypeScript, Tailwind CSS
-* **Backend & Security:** Supabase (PostgreSQL), Row-Level Security (RLS)
-* **Mobile Solutions:** React Native (Expo) with Biometric Identity Handshaking
-* **DevSecOps:** Currently specializing in Google & IBM Cybersecurity Frameworks
+Mobile Defense: React Native (Expo) with Biometric Identity Integration
 
-## 🏗️ Featured Architecture: eMVeOzHub
-* **Zero-Trust Data Path:** Implemented strict RLS to ensure 0% unauthorized data exposure across 4 core business tables.
-* **Breadcrumb Pathing:** Custom logic for sales route monitoring with automated "Signal Loss" detection.
-* **LocoHub Star Program:** A tiered incentive system that links payroll accuracy to data integrity scores.
+Security Frameworks: NIST, Google & IBM Cybersecurity Frameworks
 
----
+🏗️ Featured Architecture: eMVeOzHub (formerly LocoHub)
+Zero-Trust Data Path: Engineered strict RLS protocols to achieve 100% data isolation across core business tables.
 
-## 📈 DevSecOps Roadmap (March - May 2026)
-* **[Target] Google Cybersecurity Professional Certificate:** Mastering Linux/Python automation.
-* **[Target] IBM Cybersecurity Analyst Certificate:** Focusing on enterprise threat intelligence.
+Geospatial Integrity: Custom sales route monitoring with automated "Signal Loss" detection for field teams.
 
----
+The Star Program: A logic-driven incentive system that rewards data integrity and payroll accuracy.
 
-## 🤝 Partner Feedback
-> "Michael doesn't just build apps; he builds business safeguards. His understanding of field operations combined with secure architecture is a rare find."
+📉 Professional Roadmap (Q2 2026)
+[Target] Google Cybersecurity Professional: Linux/Python security automation.
 
----
-
-## ⚙️ Development Setup
-1. `npm install`
-2. Configure `.env.local` with Supabase keys (Rigorously ignored in `.gitignore`).
-3. `npm run dev`
+[Target] IBM Cybersecurity Analyst: Enterprise threat intelligence and incident response.
