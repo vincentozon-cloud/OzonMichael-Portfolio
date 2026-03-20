@@ -8,17 +8,17 @@ const About = () => {
         
         {/* Left Side: Professional Narrative */}
         <div className="flex-1 space-y-6">
-          <h3 className="text-2xl font-black text-blue-400 uppercase tracking-tight">
-            Building Digital Solutions with a Field-Tested Perspective
+          <h3 className="text-xl font-bold text-white mb-4">
+            Architecting Secure Systems with a Field-Tested Perspective
           </h3>
-          <p className="text-gray-400 leading-relaxed">
-            I didn't start my career behind a terminal; I started it in the field. My time as a <span className="text-white font-semibold">Junior Salesman</span> taught me that software is only as good as the problem it solves for the user. This "human-first" mindset is what drives my work as a <span className="text-blue-400 font-bold underline decoration-blue-500/30">Jr. Full-Stack Developer</span> today.
+          <p className="text-gray-400 leading-relaxed mb-4">
+            I don’t just build applications; I engineer <span className="text-white font-semibold">secure, scalable digital environments</span>. My journey started in the field as a <span className="text-white font-semibold">Junior Salesman</span>, where I learned that technology is only as valuable as the trust it builds with the user. Today, I merge that human-centric focus with an <span className="text-blue-400 font-bold underline decoration-blue-500/30">AWS Certified</span> cloud infrastructure and a <span className="text-blue-400 font-bold underline decoration-blue-500/30">Cybersecurity Analyst</span> mindset.
+          </p>
+          <p className="text-gray-400 leading-relaxed mb-4">
+            Every line of <span className="text-white font-semibold">TypeScript</span> I write is informed by the structural precision of my background as an <span className="text-white font-semibold">AutoCAD Operator</span> and the high-stakes compliance standards of <span className="text-white font-semibold">Legal Assistance</span>. I specialize in building "Fail-Safe" systems that respect Intellectual Property (RA 8293) while maintaining the operational agility required in modern <span className="text-white font-semibold">DevSecOps</span>.
           </p>
           <p className="text-gray-400 leading-relaxed">
-            Every project I touch benefits from the structural precision I learned as an <span className="text-white font-semibold">AutoCAD Operator</span> and the meticulous attention to detail required in <span className="text-white font-semibold">Legal Assistance</span>. I focus on creating clean, efficient code that respects Intellectual Property standards (RA 8293) and delivers a seamless experience for the end-user.
-          </p>
-          <p className="text-gray-400 leading-relaxed">
-            By merging my real-world experience with <span className="text-white font-semibold">Professional Certifications from Coursera</span>, I offer a balanced approach to development—technical enough to build complex features, but grounded enough to remember who they are being built for.
+            Currently deep-diving into the <span className="text-white font-semibold italic">ISC2 SSCP Path</span>, I offer a rare hybrid approach: the technical depth to develop complex full-stack features and the defensive rigor to ensure they stay standing.
           </p>
           
           <div className="pt-4 flex gap-4">
@@ -45,7 +45,7 @@ const About = () => {
             </div>
             <div className="flex border-b border-white/5 pb-2">
               <span className="w-32 text-blue-400 font-bold uppercase text-[10px] tracking-widest">Current Role:</span>
-              <span className="text-gray-300 text-sm font-medium">Jr. Full-Stack Developer</span>
+              <span className="text-gray-300 text-sm font-medium">CyberSecurity Analyst</span>
             </div>
             <div className="flex border-b border-white/5 pb-2">
               <span className="w-32 text-blue-400 font-bold uppercase text-[10px] tracking-widest">Background:</span>

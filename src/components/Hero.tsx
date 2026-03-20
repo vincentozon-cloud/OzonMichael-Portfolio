@@ -16,20 +16,20 @@ const Hero = () => {
         {/* Left Column: Introduction & Typewriter */}
         <div className="z-10 flex-[1.2] text-center md:text-left order-2 md:order-1 space-y-1">
           
-          <span className="text-white text-2xl md:text-3xl lg:text-4xl font-medium block font-soria">
+          <span className="text-white text-2xl md:text-2xl lg:text-4xl font-medium block font-soria">
             Hi! I'm
           </span>
 
-          <h2 className="text-blue-400 text-3xl md:text-4xl lg:text-5xl font-black tracking-tight uppercase pb-4">
+          <h2 className="text-blue-400 text-3xl md:text-3xl lg:text-5xl font-black tracking-tight uppercase pb-4">
             Michael Vincent Ozon
           </h2>
           
           <h1 className="tracking-tight leading-[1.1] pt-2">
-            <span className="text-white text-2xl md:text-3xl lg:text-4xl font-medium block mb-2 font-soria">
+            <span className="text-white text-2xl md:text-2xl lg:text-4xl font-medium block mb-2 font-soria">
               I am a
             </span>
             
-            <span className="block text-xl md:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600 min-h-[1.2em] whitespace-nowrap">
+            <span className="block text-xl md:text-4xl lg:text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-[#03ccff] to-[#09fbff] min-h-[1.2em] whitespace-nowrap">
               <Typewriter
                 options={{
                   strings: [

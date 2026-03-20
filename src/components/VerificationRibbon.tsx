@@ -28,10 +28,10 @@ const VerificationRibbon = () => {
   ];
 
   return (
-    <div className="w-full border-y border-white/5 bg-white/[0.01] backdrop-blur-[2px] py-10 my-8">
+    <div className="w-full border-y border-white/5 bg-white/1 backdrop-blur-[2px] py-10 my-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-3 mb-8 opacity-50">
-          <div className="h-[1px] w-8 bg-emerald-500" />
+          <div className="h-px w-8 bg-emerald-500" />
           <span className="text-[9px] font-mono text-white uppercase tracking-[0.5em]">
             SYSTEM_VERIFIED_CREDENTIALS_V2
           </span>
@@ -46,15 +46,15 @@ const VerificationRibbon = () => {
               transition={{ delay: idx * 0.1 }}
               className={`
                 relative flex items-center 
-                bg-white/[0.03] backdrop-blur-md 
+                bg-white/3 backdrop-blur-md 
                 border border-white/10 rounded-lg 
                 overflow-hidden group 
                 transition-all duration-500 
-                hover:bg-white/[0.06] hover:border-white/20
+                hover:bg-white/6 hover:border-white/20
                 ${cert.glow}
               `}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent pointer-events-none" />
               <div className="bg-black/20 px-4 py-4 border-r border-white/10 flex flex-col justify-center relative z-10">
                 <span className="text-[7px] font-bold text-emerald-500/60 uppercase tracking-widest mb-1">
                   ISSUER
