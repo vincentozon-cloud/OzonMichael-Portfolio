@@ -6,7 +6,21 @@ const VerificationRibbon = () => {
   const credentials = [
     { 
       platform: "COURSERA", 
-      course: "Full-Stack Development", 
+      course: "ISC2 Systems Security Certified Practitioner",
+      status: "Verified",
+      glow: "group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]",
+      statusColor: "text-blue-400 border-blue-500/30 bg-blue-500/10"
+    },
+    { 
+      platform: "COURSERA", 
+      course: "AWS Cloud Practitioner",
+      status: "Verified",
+      glow: "group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]",
+      statusColor: "text-blue-400 border-blue-500/30 bg-blue-500/10"
+    },
+    { 
+      platform: "COURSERA", 
+      course: "Meta Full-Stack Development",
       status: "Verified",
       glow: "group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]",
       statusColor: "text-blue-400 border-blue-500/30 bg-blue-500/10"
