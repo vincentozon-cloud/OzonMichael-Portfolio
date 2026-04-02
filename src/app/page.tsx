@@ -4,6 +4,7 @@ import { motion, Variants } from 'framer-motion';
 // Removed useParticles since we are using Vanta
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ProjectHighlight from "@/components/ProjectHighlight"; // Added ProjectHighlight
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -37,8 +38,11 @@ export default function Home() {
           <Hero />
         </section>
 
-        {/* Verification Ribbon - Placed between Hero and About */}
+        {/* Verification Ribbon - Placed between Hero and Project Highlight */}
         <VerificationRibbon />
+
+        {/* FEATURED PROJECT: ROC - Placed before About Me */}
+        <ProjectHighlight />
 
         <div className="max-w-300 mx-auto px-4 md:px-8 space-y-32 pb-20">
           
