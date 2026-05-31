@@ -9,22 +9,22 @@ const About = () => {
         {/* Left Side: Professional Narrative */}
         <div className="flex-1 space-y-6">
           <h3 className="text-xl font-bold text-white mb-4">
-            Architecting Secure Systems with a Field-Tested Perspective
+            Connecting and Securing Enterprise Data Pipelines
           </h3>
           <p className="text-gray-400 leading-relaxed mb-4">
-            I don’t just build applications; I engineer <span className="text-white font-semibold">secure, scalable digital environments</span>. My journey started in the field as a <span className="text-white font-semibold">Junior Salesman</span>, where I learned that technology is only as valuable as the trust it builds with the user. Today, I merge that human-centric focus with an <span className="text-blue-400 font-bold underline decoration-blue-500/30">AWS Certified</span> cloud infrastructure and a <span className="text-blue-400 font-bold underline decoration-blue-500/30">Cybersecurity Analyst</span> mindset.
+            My path into enterprise software wasn't a straight line. I started out building full-stack web applications, shifted heavily into <span className="text-white font-semibold">cybersecurity and network operations</span>, and eventually found my exact sweet spot: <span className="text-blue-400 font-bold underline decoration-blue-500/30">SAP Integration</span>. I realized that knowing how to build an app is great, but knowing how to safely route massive amounts of data between different enterprise systems is where the real challenge is.
           </p>
           <p className="text-gray-400 leading-relaxed mb-4">
-            Every line of <span className="text-white font-semibold">TypeScript</span> I write is informed by the structural precision of my background as an <span className="text-white font-semibold">AutoCAD Operator</span> and the high-stakes compliance standards of <span className="text-white font-semibold">Legal Assistance</span>. I specialize in building "Fail-Safe" systems that respect Intellectual Property (RA 8293) while maintaining the operational agility required in modern <span className="text-white font-semibold">DevSecOps</span>.
+            I don't just write theoretical code; I handle the everyday plumbing. If a customer web portal needs to drop a JSON payload into a legacy ERP system, I'm the one who maps the fields, configures the API endpoints, and sets up the OAuth security so the connection actually works without throwing critical errors.
           </p>
           <p className="text-gray-400 leading-relaxed">
-            Currently deep-diving into the <span className="text-white font-semibold italic">ISC2 SSCP Path</span>, I offer a rare hybrid approach: the technical depth to develop complex full-stack features and the defensive rigor to ensure they stay standing.
+            I bring an infrastructure mindset to <span className="text-white font-semibold italic">SAP BTP</span>. By combining my background as a <span className="text-white font-semibold">Network Admin</span> with cloud security, I build data highways that are simply fail-safe by design and secure by default.
           </p>
           
           <div className="pt-4 flex gap-4">
-             <div className="px-4 py-2 bg-blue-600/10 border border-blue-500/20 backdrop-blur-sm rounded-lg text-sm transition-all hover:bg-blue-600/20">
-                <span className="block text-blue-400 font-bold text-xl uppercase">Pro</span>
-                <span className="text-[10px] uppercase tracking-widest text-gray-400">Coursera Verified</span>
+             <div className="px-4 py-2 bg-amber-600/10 border border-amber-500/20 backdrop-blur-sm rounded-lg text-sm transition-all hover:bg-amber-600/20">
+                <span className="block text-amber-400 font-bold text-xl uppercase">SAP</span>
+                <span className="text-[10px] uppercase tracking-widest text-gray-400">Integration Suite</span>
              </div>
              <div className="px-4 py-2 bg-emerald-600/10 border border-emerald-500/20 backdrop-blur-sm rounded-lg text-sm transition-all hover:bg-emerald-600/20">
                 <span className="block text-emerald-400 font-bold text-xl">2026</span>
@@ -45,11 +45,11 @@ const About = () => {
             </div>
             <div className="flex border-b border-white/5 pb-2">
               <span className="w-32 text-blue-400 font-bold uppercase text-[10px] tracking-widest">Current Role:</span>
-              <span className="text-gray-300 text-sm font-medium">CyberSecurity Analyst</span>
+              <span className="text-gray-300 text-sm font-medium">Network Admin</span>
             </div>
             <div className="flex border-b border-white/5 pb-2">
               <span className="w-32 text-blue-400 font-bold uppercase text-[10px] tracking-widest">Background:</span>
-              <span className="text-gray-300 text-sm font-medium">Sales • Technical • Legal</span>
+              <span className="text-gray-300 text-sm font-medium">Network Ops • Security • SAP</span>
             </div>
             <div className="flex border-b border-white/5 pb-2">
               <span className="w-32 text-blue-400 font-bold uppercase text-[10px] tracking-widest">Status:</span>

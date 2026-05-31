@@ -12,12 +12,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lean, enterprise-focused navigation
   const navItems = [
     { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Portfolio", href: "#projects" },
-    { name: "Integrity", href: "#integrity" }, // Beyond the Code
-    { name: "Journey", href: "#hobbies" },    // Creative Journey
+    { name: "Credentials", href: "#credentials" }, 
+    { name: "Blueprints", href: "#blueprints" },
     { name: "Contact", href: "#contact" }
   ];
 
@@ -35,19 +34,19 @@ const Navbar = () => {
             <Link 
               key={item.name} 
               href={item.href} 
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+              className="text-slate-300 hover:text-emerald-400 transition-colors duration-300"
             >
               {item.name}
             </Link>
           ))}
         </div>
 
-        {/* Updated 'LocoHub Star' Badge area using GlassButton logic */}
+        {/* System Status Indicator */}
         <div className="hidden md:block scale-75 origin-right">
           <GlassButton 
-            text="Partner Status" 
-            className="py-2 px-6 text-[10px]"
-            onClick={() => console.log("Integrity Score: 100%")}
+            text="System Verified" 
+            className="py-2 px-6 text-[10px] border-emerald-500/30 hover:bg-emerald-500/10"
+            onClick={() => console.log("Infrastructure Secure. Zero Trust Enforced.")}
           />
         </div>
       </div>

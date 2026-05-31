@@ -33,9 +33,9 @@ const Hero = () => {
               <Typewriter
                 options={{
                   strings: [
-                    'CLOUD CYBERSECURITY ANALYST', 
-                    'ASPIRING DevSecOps ENGINEER', 
-                    'FULL-STACK DEVELOPER', 
+                    'SAP INTEGRATION DEVELOPER', 
+                    'ENTERPRISE CLOUD MIDDLEWARE', 
+                    'SECURE BTP ARCHITECTURE', 
                   ],
                   autoStart: true,
                   loop: true,
@@ -53,10 +53,6 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
-            <GlassButton 
-              text="View Projects" 
-              onClick={() => scrollTo('projects')}
-            />
             <GlassButton 
               text="Contact Me" 
               onClick={() => scrollTo('contact')}

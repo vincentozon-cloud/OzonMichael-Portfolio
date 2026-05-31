@@ -40,7 +40,7 @@ export default function EnterpriseCaseStudies() {
   ];
 
   return (
-    <section className="w-full border-y border-white/5 bg-white/1 backdrop-blur-[2px] py-16 my-8">
+    <section id="blueprints" className="w-full border-y border-white/5 bg-white/1 backdrop-blur-[2px] py-16 my-8">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-12 opacity-90">

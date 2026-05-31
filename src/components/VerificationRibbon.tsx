@@ -115,7 +115,7 @@ const VerificationRibbon = () => {
   ];
 
   return (
-    <div className="w-full border-y border-white/5 bg-white/1 backdrop-blur-[2px] py-10 my-8">
+    <div id="credentials" className="w-full border-y border-white/5 bg-white/1 backdrop-blur-[2px] py-10 my-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center gap-3 mb-8 opacity-50">
           <div className="h-px w-8 bg-emerald-500" />

@@ -44,8 +44,6 @@ export default function Home() {
 
         <EnterpriseCaseStudies/>
 
-        {/* FEATURED PROJECT: ROC - Placed before About Me */}
-        <ProjectHighlight />
 
         <div className="max-w-300 mx-auto px-4 md:px-8 space-y-32 pb-20">
           
@@ -64,86 +62,7 @@ export default function Home() {
              </div>
              <About />
           </motion.section>
-
-          {/* 3. Skills */}
-          <motion.section 
-            id="skills" 
-            className="scroll-mt-32"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={revealVariants}
-          >
-             <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">My Skills</h2>
-                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
-             </div>
-             <Skills />
-          </motion.section>
-
-          {/* 4. Portfolio (Projects) */}
-          <motion.section 
-            id="projects" 
-            className="scroll-mt-32"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={revealVariants}
-          >
-             <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Portfolio</h2>
-                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
-             </div>
-             <Projects />
-          </motion.section>
-
-          {/* 4.5 Ongoing Projects (The Lab) */}
-          <motion.section 
-            id="ongoing" 
-            className="scroll-mt-32"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={revealVariants}
-          >
-            <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-orange-400">Current Build</h2>
-                <div className="h-1 w-20 bg-orange-500 mx-auto mt-2 rounded-full"></div>
-            </div>
-            <OngoingProjects />
-          </motion.section>
-
-          {/* 5. Testimonials Section */}
-          <motion.section 
-            id="testimonials" 
-            className="scroll-mt-32"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={revealVariants}
-          >
-            <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Client Feedback</h2>
-                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
-            </div>
-            <Testimonials />
-          </motion.section>
-
-          {/* 6. Creative Journey (Hobbies) */}
-          <motion.section 
-            id="hobbies" 
-            className="scroll-mt-32"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={revealVariants}
-          >
-             <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Creative Journey</h2>
-                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
-             </div>
-             <CreativeHobby />
-          </motion.section>
+          
 
           {/* 7. Contact */}
           <motion.section 
@@ -155,8 +74,8 @@ export default function Home() {
             variants={revealVariants}
           >
              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold uppercase tracking-widest text-blue-400">Contact</h2>
-                <div className="h-1 w-20 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+                
+                
              </div>
              <Contact />
           </motion.section>
