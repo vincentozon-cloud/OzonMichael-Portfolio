@@ -16,6 +16,7 @@ import CreativeHobby from "@/components/CreativeHobby";
 import VerificationRibbon from "@/components/VerificationRibbon";
 import Testimonials from "@/components/Testimonials";
 import VantaBackground from "@/components/VantaBackground"; // Added Vanta
+import EnterpriseCaseStudies from "@/components/EnterpriseCaseStudies";
 
 export default function Home() {
   // Removed canvasRef as Vanta handles its own mounting
@@ -40,6 +41,8 @@ export default function Home() {
 
         {/* Verification Ribbon - Placed between Hero and Project Highlight */}
         <VerificationRibbon />
+
+        <EnterpriseCaseStudies/>
 
         {/* FEATURED PROJECT: ROC - Placed before About Me */}
         <ProjectHighlight />
